@@ -1,4 +1,4 @@
-# linked in post I made about portainer_stacks
+# A linkedin post I made about the cloud I use for a few folks that asked. portainer_stacks
 
 Folks have asked me about the cloud I use, there are many free open source ones but i use "NextCloud"; you can text, call, vid call, calendar, share files, auto download to your hardware from android or iPhone app upon entering any trusted Wi-Fi you want. A cloud isn't mist in the air, its data which sits on hardware. The difference here, is that the data and messages etc sits on YOUR hardware with no middleman between you and your hardware. This set up it's more interactive that what you're paying for. Here is the catch; it takes a little bit of understanding but you can do it if you try.
 
