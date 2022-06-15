@@ -1,0 +1,18 @@
+---
+version: "2.1"
+services:
+  wireshark:
+    image: lscr.io/linuxserver/wireshark:latest
+    container_name: wireshark
+    cap_add:
+      - NET_ADMIN
+    network_mode: host
+    environment:
+      - PUID=1234
+      - PGID=1234
+      - TZ=America/Mars
+    volumes:
+      - /srv/dev/Config/wireshark:/config
+    ports:
+      - 1234:3000 #optional
+    restart: unless-stopped
