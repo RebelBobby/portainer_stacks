@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+  flarum:
+    image: mondedie/flarum:stable
+    container_name: flarum_final_1
+    environment:
+      - DEBUG=false
+      - FORUM_URL=https://www.yoururl.com
+      - DB_HOST=mariadb
+      - DB_NAME=flarum_123
+      - DB_USER=flarum_123
+      - DB_PASS=strongpassherre
+      - DB_PREF=flarum_
+      - DB_PORT=1234
+      - FLARUM_ADMIN_USER=yourUserName
+      - FLARUM_ADMIN_PASS=strongpassherre
+      - FLARUM_ADMIN_MAIL=your.email.com
+      - FLARUM_TITLE=Rasberry-Pi projects and tech talk
+    volumes:
+      - /srv/dev/blah/assets:/flarum/app/public/assets
+      - /srv/dev/blah/extensions:/flarum/app/extensions
+      - /srv/dev/blah/storage/logs:/flarum/app/storage/logs
+      - /srv/dev/blah/nginx:/etc/nginx/flarum
+    ports:
+      - 1234:8888
+    depends_on:
+      - mariadb
+
+  mariadb:
+    image: lscr.io/linuxserver/mariadb:latest
+    container_name: flarum_databs
+    environment:
+      - MYSQL_ROOT_PASSWORD=strongpassherre
+      - MYSQL_DATABASE=flarum_123
+      - MYSQL_USER=flarum_123
+      - MYSQL_PASSWORD=strongpassherre
+    volumes:
+      - /srv/dev/blah/mysql:/var/lib/mysql
