@@ -1,0 +1,23 @@
+---
+version: "2.1"
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plexTV
+    network_mode: host
+    environment:
+      - PUID=1234
+      - PGID=1234
+      - VERSION=docker
+      - PLEX_CLAIM=findYourToken
+      - PLEX_MEDIA_SERVER_USER=YrUsrNm
+    volumes:
+      - /usr/local/here/library:/config
+
+      - /mnt/SmartSpot/TV Shows:/tv
+      - /mnt/SmartSpot/Movies:/Movies
+      - /mnt/SmartSpot/Music:/Music
+      - /mnt/SmartSpot/photos:/Photos
+      - /mnt/SmartSpot/Family Movies:/Family
+      - /mnt/SmartSpot/Stand Up Comedy:/Comedy
+    restart: unless-stopped
