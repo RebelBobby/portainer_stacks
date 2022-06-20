@@ -7,11 +7,13 @@ You can find guidance on YouTube and self-researching but when your at the point
 
 It's free open source called nextcloud. The docker io advertised database won’t work on a raspberry pi so I use a different one which is listed on my github in the comments.
 
-#Heimdall
+# Flarum
+A great forum that I use
+# Heimdall
 A homelab dashboard
 #Bookstack
 An easy showcase "website"
 
-#Plex Media server
+# Plex Media server
 Need I say more
 
