@@ -11,7 +11,7 @@ It's free open source called nextcloud. The docker io advertised database won’
 A great forum that I use
 # Heimdall
 A homelab dashboard
-#Bookstack
+# Bookstack
 An easy showcase "website"
 
 # Plex Media server
