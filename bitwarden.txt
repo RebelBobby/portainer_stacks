@@ -1,0 +1,16 @@
+---
+version: "2"
+services:
+  bitwarden:
+    image: bitwardenrs/server:latest
+    container_name: bitwarden
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.bitwarden.rule=Host(`bw.blah.com`)
+      - traefik.http.routers.bitwarden.entrypoints=web
+      - traefik.http.services.bitwarden.loadbalancer.server.port=80
+    networks:
+      - web
+    volumes:
+      - /srv/dev/smartPlace/Config/BitWarden:/data/
+    restart: unless-stopped
